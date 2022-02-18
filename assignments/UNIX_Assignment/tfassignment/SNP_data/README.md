@@ -1,0 +1,1 @@
+The files in this directory are not for grading, but are files that I used to work with the SNP data and transform it into the final stage that was needed for my join. I wanted to put it here before the primary directory got too busy.
