@@ -1,6 +1,6 @@
 #UNIX Assignment
 
-#The final files to be graded at the end are found in the GRADEME directory!
+#The final directories with associated files to be graded at the end of the assignment are found in the GRADEME directory! The rest of the directories and files were for me and my data processing.
 
 ##Data Inspection
 
@@ -109,6 +109,8 @@ mv maize_genotypes.txt Rawest_genotype_data
 9. Create our joined dataset. The join was made using the 1st column (SNP ID) for each of the datasets.
 10. All of 'raw' data was sent to the "Rawest_genotype_data" directory. All of the "transposed" data was sent to the "transposed_data" directory. All of the "sorted" data was sent to the "Sorted_data" directory. This just helps keep things organized. The code will not work if copy and pasted unless in the correct directory but in a practical sense, once we run the code, we shouldnt have to run it again, unless we notice a mistake (this happened once and I had to move the files back a directory into tfassignment by using mv "MYfile" ../) as tfassignment was the main directory where I did most of the data processing.
 
+#For a given chromosome:
+
 ```
 awk '$2 ~ /^1$/' joined_maize.txt > chr1_maize.txt
 
@@ -129,7 +131,15 @@ sed 's/?/-/g' d_chr1.txt > Decreasing_with_-_chr1_maize.txt
 1. Sorting in decreasing order for position from the individual chromosome information that was created using awk above.
 2. Changing the global missing values of "?" to "-".
 
+###Finally
 
+```
+grep "multiple" joined_maize.txt > multiple_maize.txt
+wc multiple_maize.txt
+```
+
+1. Searching and grabbing lines associated with "multiple" for the entire maize dataset.
+2. Getting the number of lines, words and characters as a check to see if the script was effective - it was.
 
 ###Teosinte Data
 
@@ -189,3 +199,12 @@ sed 's/?/-/g' d_chr1.txt > Decreasing_with_-_chr1_teosinte.txt
 
 1. Sorting in decreasing order for position from the individual chromosome information that was created using awk above.
 2. Changing the global missing values of "?" to "-".
+
+###Finally
+
+```
+grep "multiple" joined_teosinte.txt > multiple_teosinte.txt
+wc multiple_teosinte.txt
+```
+1. Searching and grabbing lines associated with "multiple" for the entire teosinte dataset.
+2. Getting the number of lines, words and characters as a check to see if the script was effective - it was.
