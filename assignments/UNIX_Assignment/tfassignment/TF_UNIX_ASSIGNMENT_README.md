@@ -128,7 +128,6 @@ grep "-" Increasing_with_?_chr1_maize.txt
 sort -k3,3nr chr1_maize.txt > d_chr1.txt
 
 sed 's/?/-/g' d_chr1.txt > Decreasing_with_-_chr1_maize.txt
-
 ```
 
 1. Sorting in decreasing order for position from the individual chromosome information that was created using awk above.
@@ -201,7 +200,6 @@ grep "-" Increasing_with_?_chr1_teosinte.txt
 sort -k3,3nr chr1_teosinte.txt > d_chr1.txt
 
 sed 's/?/-/g' d_chr1.txt > Decreasing_with_-_chr1_teosinte.txt
-
 ```
 
 1. Sorting in decreasing order for position from the individual chromosome information that was created using awk above.
@@ -211,6 +209,7 @@ sed 's/?/-/g' d_chr1.txt > Decreasing_with_-_chr1_teosinte.txt
 
 ```
 grep "multiple" joined_teosinte.txt > multiple_teosinte.txt
+
 wc multiple_teosinte.txt
 ```
 1. Searching and grabbing lines associated with "multiple" for the entire teosinte dataset.
