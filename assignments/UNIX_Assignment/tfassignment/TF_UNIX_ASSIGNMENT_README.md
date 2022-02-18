@@ -146,7 +146,7 @@ wc multiple_maize.txt
 ```
 grep -c "ZMP.*" fang_et_al_genotypes.txt
 
-grep -E "ZMP.*|Group" fang_et_al_genotypes.txt > new_maize_genotypes.txt
+grep -E "ZMP.*|Group" fang_et_al_genotypes.txt > teosinte_genotypes.txt
 
 awk -f transpose.awk teosinte_genotypes.txt > transposed_teosinte_genotypes.txt
 
