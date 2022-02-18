@@ -115,9 +115,12 @@ mv maize_genotypes.txt Rawest_genotype_data
 awk '$2 ~ /^1$/' joined_maize.txt > chr1_maize.txt
 
 sort -k3,3n chr1_maize.txt > Increasing_with_?_chr1_maize.txt
+
+grep "-" Increasing_with_?_chr1_maize.txt
 ```
 1. Utilizing awk to essentially identify the pattern of a specific chromosome in the 2nd field and create a new file with that information.
 2. Sorting numerically (increasing) for the position on a given chromosome (column 3) and naming a new file. Missing values are already "?" so we dont have to change those at this point.
+3. Making sure that each missing value does indeed contain a "?" and there are no "-" for each chromosome. If nothing is generated in standard output, then there are no "-" when missing values should be "?".
 
 ##NEXT
 
@@ -135,6 +138,7 @@ sed 's/?/-/g' d_chr1.txt > Decreasing_with_-_chr1_maize.txt
 
 ```
 grep "multiple" joined_maize.txt > multiple_maize.txt
+
 wc multiple_maize.txt
 ```
 
@@ -183,10 +187,13 @@ join -1 1 -2 1 sorted_snps.txt sorted_teosinte.txt > joined_teosinte.txt
 awk '$2 ~ /^1$/' joined_teosinte.txt > chr1_teosinte.txt
 
 sort -k3,3n chr1_teosinte.txt > Increasing_with_?_chr1_teosinte.txt
+
+grep "-" Increasing_with_?_chr1_teosinte.txt
 ```
 
 1. Utilizing awk to essentially identify the pattern of a specific chromosome in the 2nd field and create a new file with that information.
 2. Sorting numerically (increasing) for the position on a given chromosome (column 3) and naming a new file. Missing values are already "?" so we dont have to change those at this point.
+3. Making sure that each missing value does indeed contain a "?" and there are no "-" for each chromosome. If nothing is generated in standard output, then there are no "-" when missing values should be "?".
 
 ##NEXT
 
