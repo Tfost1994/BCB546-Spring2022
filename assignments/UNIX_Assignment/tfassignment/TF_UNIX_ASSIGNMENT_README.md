@@ -139,10 +139,16 @@ sed 's/?/-/g' d_chr1.txt > Decreasing_with_-_chr1_maize.txt
 grep "multiple" joined_maize.txt > multiple_maize.txt
 
 wc multiple_maize.txt
+
+grep "unknown" joined_teosinte.txt > unknown_maize.txt
+
+wc unknown_maize.txt
 ```
 
 1. Searching and grabbing lines associated with "multiple" for the entire maize dataset.
 2. Getting the number of lines, words and characters as a check to see if the script was effective - it was.
+3. Searching and grabbing lines associated with "unknown" for the entire maize dataset.
+4. Getting the number of lines, words and characters as a check to see if the script was effective - it was.
 
 ###Teosinte Data
 
@@ -211,6 +217,13 @@ sed 's/?/-/g' d_chr1.txt > Decreasing_with_-_chr1_teosinte.txt
 grep "multiple" joined_teosinte.txt > multiple_teosinte.txt
 
 wc multiple_teosinte.txt
+
+grep "unknown" joined_teosinte.txt > unknown_teosinte.txt
+
+wc unknown_teosinte.txt
 ```
 1. Searching and grabbing lines associated with "multiple" for the entire teosinte dataset.
 2. Getting the number of lines, words and characters as a check to see if the script was effective - it was.
+3. Searching and grabbing lines associated with "unknown" for the entire teosinte dataset.
+4. Getting the number of lines, words and characters as a check to see if the script was effective - it was.
+
