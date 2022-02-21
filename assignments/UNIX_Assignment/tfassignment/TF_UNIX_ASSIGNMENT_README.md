@@ -140,7 +140,7 @@ grep "multiple" joined_maize.txt > multiple_maize.txt
 
 wc multiple_maize.txt
 
-grep "unknown" joined_teosinte.txt > unknown_maize.txt
+grep "unknown" joined_maize.txt > unknown_maize.txt
 
 wc unknown_maize.txt
 ```
